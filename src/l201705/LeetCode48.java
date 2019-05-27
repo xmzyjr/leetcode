@@ -4,7 +4,7 @@ package l201705;
 /**
  * @author lanshan
  */
-public class LeetCoce48 {
+public class LeetCode48 {
 
     /**
      * 给定一个 n × n 的二维矩阵表示一个图像。
@@ -67,7 +67,7 @@ public class LeetCoce48 {
     }
 
     public static void main(String[] args) {
-        LeetCoce48 l = new LeetCoce48();
+        LeetCode48 l = new LeetCode48();
         l.rotate(new int[][] { { 5, 1, 9, 11 }, { 2, 4, 8, 10 }, { 13, 3, 6, 7 }, { 15, 14, 12, 16 } });
     }
 }

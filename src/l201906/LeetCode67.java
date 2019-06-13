@@ -67,7 +67,7 @@ public class LeetCode67 {
             }
         }
         if (out == 1) {
-            sb.insert(0,1);
+            sb.insert(0, 1);
         }
         return sb.toString();
     }

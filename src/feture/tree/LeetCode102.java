@@ -41,6 +41,24 @@ public class LeetCode102 {
         return re;
     }
 
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        find(root, 1, result);
+        return result;
+    }
+
+    private void find(TreeNode root, int level, List<List<Integer>> result) {
+        if (root == null) {
+            return;
+        }
+        if (level > result.size()) {
+            result.add(new ArrayList<>());
+        }
+        result.get(level-1).add(root.val);
+        find(root.left, level + 1, result);
+        find(root.right, level+1, result);
+    }
+
     private static class TreeNode {
         int val;
         TreeNode left;

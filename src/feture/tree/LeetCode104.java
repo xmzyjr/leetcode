@@ -23,4 +23,11 @@ public class LeetCode104 {
         int right = find(root.right, level + 1);
         return Math.max(left, right);
     }
+    
+    private int find2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return Math.max(find2(root.left), find2(root.right)) + 1;
+    }
 }

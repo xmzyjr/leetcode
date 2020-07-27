@@ -43,7 +43,7 @@ public class Work0811 {
         int[] num = new int[]{1,5,10,25};
         for (int i = 1; i < 4; i++) {
             for (int j = num[i]; j <= n; j++) {
-                res[j] = (res[j - num[i]] + res[j]) % mod;
+                res[j] = (res[j - num[i]] % mod + res[j]) % mod;
             }
         }
         return res[n];
@@ -67,7 +67,7 @@ public class Work0811 {
 
     public static void main(String[] args) {
         Work0811 l = new Work0811();
-        System.out.println(l.waysToChange(1000000));
+        System.out.println(l.waysToChange(929782));
 
     }
 }

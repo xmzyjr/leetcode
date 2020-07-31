@@ -4,6 +4,11 @@ package feture.dp.mid;
  * @author lanshan
  */
 public class LeetCode62 {
+
+    /**
+     * n 行，m列，
+     * 从左上走到右下，只能往左或者往右走
+     */
     public int uniquePaths(int m, int n) {
         if (m<=0 || n<=0)
             return 0;

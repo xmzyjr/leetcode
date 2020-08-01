@@ -71,6 +71,27 @@ public class LeetCode877 {
             int fir;
             int sec;
         }
+        
+        private int winFirst(int[] piles) {
+            if (piles == null || piles.length == 0)
+                return 0;
+            return Math.max(first(piles, 0, piles.length - 1), second(piles, 0, piles.length - 1));
+        }
+        
+        private int first(int[] piles, int start, int end) {
+            if (start == end) 
+                return piles[start];
+            return Math.max(piles[start] + second(piles, start + 1, end), piles[end] + second(piles, start, end - 1));
+        }
+
+        private int second(int[] piles, int start, int end) {
+            if (start == end)
+                return 0;
+            return Math.min(first(piles, start + 1, end), first(piles, start, end - 1));
+        }
+        
+        
+        
 
     }
 }

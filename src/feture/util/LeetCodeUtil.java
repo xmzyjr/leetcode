@@ -13,4 +13,11 @@ public class LeetCodeUtil {
             System.out.println();
         }
     }
+
+    public static void printList(int[] num) {
+        for (int i : num) {
+            System.out.print(i+" ");
+        }
+        System.out.println();
+    }
 }

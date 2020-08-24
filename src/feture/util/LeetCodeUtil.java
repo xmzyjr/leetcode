@@ -20,4 +20,11 @@ public class LeetCodeUtil {
         }
         System.out.println();
     }
+
+    public static void printList(boolean[] num) {
+        for (boolean i : num) {
+            System.out.print((i ? "T" : "F") + " ");
+        }
+        System.out.println();
+    }
 }

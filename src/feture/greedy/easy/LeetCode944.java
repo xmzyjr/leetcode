@@ -1,4 +1,4 @@
-package feture.greedy.mid;
+package feture.greedy.easy;
 
 /**
  * @author lanshan

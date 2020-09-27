@@ -1,4 +1,4 @@
-package feture.greedy.mid;
+package feture.greedy.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

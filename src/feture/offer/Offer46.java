@@ -22,7 +22,7 @@ public class Offer46 {
         }
         int i1 = 0, i2 = -1;
         int post = -1;
-        int count = 0;
+        int count = 1;
         int now;
         while (num != 0) {
             now = num % 10;
@@ -30,8 +30,7 @@ public class Offer46 {
                 count = 1;
                 i1 = 1;
             } else {
-                int temp = now * 10 + post;
-                if (temp >= 10 && temp <= 25) {
+                if (now == 1 || (now == 2 && post <= 5)) {
                     count = i2 == -1 ? 2 : i1 + i2;
                     i2 = i1;
                     i1 = count;

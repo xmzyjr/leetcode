@@ -22,8 +22,10 @@ public class MergeTwoSortedLists {
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
                 temp = l1;
+                l1 = l1.next;
             } else {
                 temp = l2;
+                l2 = l2.next;
             }
             if (head == null) {
                 head = temp;
@@ -32,8 +34,6 @@ public class MergeTwoSortedLists {
                 pre.next = temp;
                 pre = pre.next;
             }
-            l1 = l1.next;
-            l2 = l2.next;
         }
         ListNode[] t = merge(l1, pre, head);
         head = t[0];

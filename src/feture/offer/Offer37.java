@@ -81,14 +81,19 @@ public class Offer37 {
                     nodes[i] = new TreeNode(Integer.parseInt(node[i].trim()));
                 }
             }
-            for (int i = 0; i < nodes.length; i++) {
-                int leftIndex = 2 * i + 1;
-                int rightIndex = 2 * i + 2;
-                if (nodes[i] == null) {
+            
+            int leftIndex = 1, rightIndex = 2;
+            int rootIndex = 0;
+            while (leftIndex < nodes.length) {
+                if (nodes[rootIndex] == null) {
+                    rootIndex++;
                     continue;
                 }
-                nodes[i].left = leftIndex < node.length ? nodes[leftIndex] : null;
-                nodes[i].right = rightIndex < node.length ? nodes[rightIndex] : null;
+                nodes[rootIndex].left = leftIndex < node.length ? nodes[leftIndex] : null;
+                nodes[rootIndex].right = rightIndex < node.length ? nodes[rightIndex] : null;
+                rootIndex++;
+                leftIndex += 2;
+                rightIndex += 2;
             }
             return nodes[0];
         }

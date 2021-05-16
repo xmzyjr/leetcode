@@ -29,15 +29,16 @@ public class Offer60 {
      */
     int[] num;
     int N;
+
     public double[] dicesProbability(int n) {
-        num = new int[6 * n - n+1];
+        num = new int[6 * n - n + 1];
         N = n;
         find(n, 0);
         int sum = 0;
         for (int i : num) {
             sum += i;
         }
-        double[] t = new double[6 * n - n+1];
+        double[] t = new double[6 * n - n + 1];
         for (int i = 0; i < num.length; i++) {
             t[i] = num[i] * 1.0 / sum;
         }
@@ -46,7 +47,7 @@ public class Offer60 {
 
     private void find(int numIndex, int sum) {
         if (numIndex == 0) {
-            num[sum-N]++;
+            num[sum - N]++;
             return;
         }
         for (int i = 1; i <= 6; i++) {

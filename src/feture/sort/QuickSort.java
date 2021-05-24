@@ -34,6 +34,22 @@ public class QuickSort {
         return left;
     }
 
+    private int partition2(int[] num, int l, int r) {
+        int temp = num[l];
+        while (l < r) {
+            while (l < r && num[r] >= temp) {
+                r--;
+            }
+            num[l] = num[r];
+            while (l < r && num[l] <= temp) {
+                l++;
+            }
+            num[r] = num[l];
+        }
+        num[l] = temp;
+        return l;
+    }
+
     public static void main(String[] args) {
         QuickSort s = new QuickSort();
         s.sort(new int[] {3, 5, 4, 6, 1, 2});

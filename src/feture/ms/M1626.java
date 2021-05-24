@@ -41,6 +41,7 @@ public class M1626 {
         Stack<String> res = new Stack<>();
         Stack<Character> opt = new Stack<>();
         char[] chars = s.toCharArray();
+        // 从后往前遍历
         for (int i = chars.length - 1; i >= 0; i--) {
             if (chars[i] == ' ') {
                 continue;
@@ -56,6 +57,7 @@ public class M1626 {
                 }
                 boolean pushed = false;
                 while (!pushed) {
+                    // 同级，或者还要大的
                     if (opt.isEmpty() || map.get(chars[i]) >= map.get(opt.peek())) {
                         opt.push(chars[i]);
                         pushed = true;
